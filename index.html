@@ -37,7 +37,9 @@
             // set "language" to the output of the "detectLanguage" function
             var language = detectLanguage(inputText.value);
             // call the "translate" function with the input text and the language
-            translate(inputText.value, language);
+            var outputText = translate(inputText.value, language);
+            // set the contents of the text box to the output text
+            inputText.value = outputText;
         })
     </script>
 </body>
